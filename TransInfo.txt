@@ -1,0 +1,75 @@
+The AW4 transmission was used in 4.0L equipped XJs from 1987 through 2001. It was also rarely used in 2.5L equipped XJs with the automatic transmission option, 1987-1990*. It has 3 regular forward gears and 1 overdrive gear, along with a torque converter containing a lockup clutch. Gear selection is part hydraulic and part electronically controlled via solenoid valves. Shift firmness is controlled by a throttle valve cable which meters fluid pressure into the valve body based on throttle position.
+
+Gearshift positions -
+Park - this one's obvious.
+Reverse - obvious.
+Neutral - also obvious
+Drive - in this gearshift position, 1, 2, 3, or Overdrive may be electronically selected. See the table after this section for details. If the electronics are disconnected, this will put the transmission in overdrive.
+3 - in this gearshift position, 1, 2, or 3 may be electronically selected. If the electronics are disconnected, this will put the transmission in 3rd.
+1-2 - in this gearshift position, gears 1 and 2 are available via electronic control. The transmission hydraulics enable engine braking in 1st gear with the gearshift in this position. If the electronics are disconnected, this will put the transmission in 1st.
+
+2nd gear is not available without some sort of electronics (stock, a toggle switch in the dash, whatever) powering the solenoids.
+
+Gear selection vs solenoid power table:
+1st gear - solenoid 1 ON, solenoid 2 OFF
+2nd gear - solenoid 1 ON, solenoid 2 ON
+3rd gear - solenoid 1 OFF, solenoid 2 ON
+overdrive - solenoid 1 OFF, solenoid 2 OFF
+
+Solenoid 3 locks the torque converter clutch (direct drive) when powered. It should only be powered in 3rd or Overdrive gear.
+
+All solenoids should show 11 to 15 ohms when the transmission has reached running temperature.
+
+Year splits, aka "will this transmission fit my XJ?"
+1987-1990, the AW4 had a 21 spline output shaft, a 1 pulse per revolution reed switch Output Speed Sensor, no Input Speed Sensor, and a 0.705:1 OD ratio. 4.0L and 2.5L transmissions are fundamentally the same, except for the torque converter and bellhousing, which are unique for each motor.
+1990.5-1996, the AW4 switched to a 23 spline output shaft and a 0.75:1 OD ratio. It was no longer available behind the 2.5L engine. Otherwise, it remained exactly the same.
+1997, the AW4 is exactly the same as the 1990.5-1996 units, except the electrical connector for the wiring harness changed. A simple cut and splice will solve this problem.
+1998-01, the AW4 changed electrically, but is otherwise the same as 1990.5-1997 units. The Output Speed Sensor changed from a 1pps reed switch to a 4 pulse/rev variable reluctance pickup similar to the RENIX CPS and most ABS wheel speed sensors. A 16 pulse/rev Input Speed Sensor was also added. The ISS and OSS for these years are the same part number; one may be substituted for the other for spare parts purposes.
+NSS:
+1987-1996 the NSS is the same. Positions for R, P/N, 1-2, and 3. No connections indicates that the shifter is in OD - OR that the NSS is dirty. The TCU can't tell, this can lead to some common transmission shifting symptoms.
+1997-2001 the NSS wiring harness connector is different but the internals are the same - mostly. There is now a circuit for each gear position (1-2, 3, D) on the switch and an extra wire for the new position. This was added to improve feedback to the TCU and likely also to allow the TCU to definitively throw a DTC code if it sees no contacts shorted, which now indicates a bad NSS rather than "bad NSS or overdrive gear, we don't know."
+
+This write-up does not attempt to cover the 2wd editions of the AW4 as thoroughly as the 4wd. The major difference is the addition of another year split - 1995 and earlier 2WD AW4s will have the old style slip yoke and output seal while 1996 and later 2WD AW4s will have the new style slip yoke and output seal, as well as dust slinger. The vehicle speed sensor is also located in the transmission tailhousing. A 2wd AW4 cannot be converted to a 4WD unit without full disassembly as the output shaft is a different length, has 27 splines (to match the slip yoke used on the rear output of 4WD XJ transfer cases) rather than 21 or 23 splines, and includes the 13 tooth worm gear for the VSS or speedo takeoff which would otherwise be in the tailcone of the transfer case.
+
+What does this mean for swapping (4wd specific)?
+If you have a 1987-1990 XJ:
+1987-1990 AW4s are bolt-in.
+1990.5-1996 are bolt-in as long as you swap input gears in your transfer case to a 23 spline, or swap the transfer case as well. Remember that NP231 input gear cuts changed in 94 or 95 and that the rear output of the transfer case changed from 95 to 96 when selecting a donor.
+1997 are bolt-in if you follow the transfer case input gear info from 1990.5-1996 and also splice the wiring harness connector. All it takes is 5 butt-splice crimp terminals and a few minutes, so don't worry about it, if you can handle wiring some fog lights you can handle this. You may need to run a new set of wires for your transfer case indicator lamp connector if you have an NP231 (I haven't had a chance to verify this, will check next time a friend of mine drops by with his RENIX.)
+1998-2001 require more work. All the transfer case input gear info from 1990.5-1997 applies, on top of that, the sensors have changed! You can either build the circuit given here by lawsoncl or swap the transmission tailhousing, sensor drive rotor, and output speed sensor as shown here by Frank Z to make this work.
+If you have a 1990.5-1996 XJ:
+1987-1990 AW4s are bolt-in... as long as you also swap the input gears in your transfer case, or the whole transfer case. Remember that the NP231 input gear cuts changed in 94 or 95 and that the rear output of the transfer case changed from 95 to 96 when selecting a donor. I would NOT suggest this swap unless in dire straits (need to get off the trail, need to get to work tomorrow or be fired, etc) as you are limiting yourself to a rapidly disappearing selection of 21 spline spare parts in the boneyards.
+1990.5-1996 AW4s are bolt-in.
+1997 AW4s are bolt-in, except you have to cut and splice the wiring harness connector. Again, 5 butt-splice crimp terminals and a few minutes and this is done. You may need to add custom wiring for the transfer case indicator lamps (see this bullet under the 87-90 section, above.)
+1998-2001 AW4s require more work. All the transfer case input gear info from 1990.5-1997 applies, on top of that, the sensors have changed! You can either build the circuit given here by lawsoncl or swap the transmission tailhousing, sensor drive rotor, and output speed sensor as shown here by Frank Z to make this work. You may need to add custom wiring for the transfer case indicator lamps (see above.)
+If you have a 1997 XJ:
+1987-1990 AW4s are bolt-in... as long as you also swap the input gears in your transfer case, or the whole transfer case. You also have to cut and splice the wiring harness connector. Remember that the NP231 input gear cuts changed in 94 or 95 and that the rear output of the transfer case changed from 95 to 96 when selecting a donor. I would NOT suggest this swap unless in dire straits (need to get off the trail, need to get to work tomorrow or be fired, etc) as you are limiting yourself to a rapidly disappearing selection of 21 spline spare parts in the boneyards.
+1990.5-1996 AW4s are bolt-in, except you have to cut and splice the wiring harness connector. Again, 5 butt-splice crimp terminals and a few minutes and this is done. You will have an EXTRA connector for the transfer case indicator lamp wiring (possibly depending on which transfer case you have) - plug the transfer case switch into the one it was previously plugged into, NOT the one built into the harness on the new AW4! You might want to cut the extra one off or tape it up to avoid confusion.
+1997 AW4s are bolt-in.
+1998-2001 AW4s require more work. All the transfer case input gear info from 1990.5-1997 applies, on top of that, the sensors have changed! You can either build the circuit given here by lawsoncl or swap the transmission tailhousing, sensor drive rotor, and output speed sensor as shown here by Frank Z to make this work.
+If you have a 1998-2001 XJ:
+1987-1997 AW4s are not going to work without significant machine work. Reason is that your TCU is expecting an input speed sensor signal, but the mounting boss for the ISS is not machined out on the donor transmission housing and the rotor needed is not installed in the geartrain. You will be fully disassembling the donor transmission, doing specialized machining on the housing, swapping some parts from your old transmission, and basically doing a massive amount of work to swap in a non-ideal part. I would not suggest this swap unless you are really, really screwed and don't care that your CEL will be going off and you will have to leave the transmission unplugged from the wiring harness and shift it manually, with no second gear available. This swap is also fine if you are going to be building a trail only rig, don't care about your CEL going off all the time, and will be installing a custom shifter setup. You could also swap in a proper-year manual transmission XJ ECU and install a custom shifter setup to avoid a CEL.
+1998-2001 AW4s are bolt in.
+UPDATE Mar4 2013 -  user memasmuffn reports that installing a 1997 TCU (designed to work with the older 1 pulse/rev reed switch output sensor, and no input sensor) in a 98-01 XJ with a 97 and earlier AW4 swapped into it results in no codes! This is great news, any AW4 (2wd vs 4wd, 2.5L 87-90 vs 4.0L all-years, and 2wd 95- vs 2wd 96+ notwithstanding) can be bolted into any XJ/MJ with only minor wire splicing, hard-part/housing/sensor changing, and perhaps TCU swapping at the worst. Awaiting further testing from the field to make sure the code stays gone!
+UPDATE Jan/Feb 2013 - a thread by Boostwerks shows that it is entirely possible to convert a 97- AW4 into a 98+ one if you're suitably motivated. First bullet point of this section is basically the procedure he used - machined out port for ISS in main trans housing, installed geartrain parts intended for a 98+ in front half of transmission, etc. Not for newbies or those without significant transmission rebuild and machining/fabrication experience.
+UPDATE Jul20 2015 -  user Milner reports that a 97 TCU and sensor/rotor did NOT work for him in his 98-01 recipient vehicle. Unless you have the parts around to try this and don't mind possibly having to take your transmission apart a few times and drop the transfer case just as many times, I recommend sticking with a 98-01 AW4 for these recipient vehicles.
+Clear as mud? 
+
+Replacement parts -
+input / torque converter seal: 8350 3752 OEM part number.
+output seal on adapter housing for transfer case: 8350 4055 OEM part number.
+pan gasket and filter screen kit: ATP B112 at NAPA. Should cross reference to whatever others are available at other stores.
+Cooler lines: 2x 800-714 quick disconnect fittings, 1x 624-300 line, 1x 624-301 line, 1x 624-334 line (all Dorman parts.) - UPDATE MARCH 2014: I've heard complaints from multiple people about the Dorman lines, apparently they switched suppliers at some point and the flaring/crimping/quick disconnect ridge formation on them is now crap and doesn't fit well or stay together. Avoid them, or inspect carefully before purchase.
+Custom shifters -
+On 1996 and earlier XJs, you can install whatever custom electronic shifter you want with no fear of a CEL.
+On 1997 XJs, it appears you can fake the CEL into not turning on using some basic electronics, and then install whatever custom electronic shifter you want. I have tested this but not extensively; it appears to work but you should verify this yourself before committing to this plan.
+On 1998-2001 XJs, it seems the TCU is smart enough to figure out what gear it is actually in using the ISS/OSS signals, and it will require some more advanced electronics to fool it. I haven't figured this out yet. UPDATE Mar4 2013 -  user memasmuffn reports that installing a 97 TCU in a 98+ XJ results in no codes when using a 97- AW4 and sensors as well, which means that custom shifters should be possible using a mix of 97 parts (tailhousing, sensor drive rotor, OSS, TCU) and all the tricks you'd need to fool a 97 XJ (see previous paragraph) - though this hasn't been fully verified. Search for posts on the subject by users raneil, rdesjardin, myself, lawsoncl, etc for more info on what's involved in fooling the electronics.
+UPDATE Jul20 2015 -  user Milner reports that a 97 TCU and sensor/rotor did NOT work for him in his 98-01 recipient vehicle. Unless you have the parts around to try this and don't mind possibly having to take your transmission apart a few times and drop the transfer case just as many times, I recommend sticking with a 98-01 AW4 for these recipient vehicles.
+
+I won't cover debugging AW4 problems in this post... perhaps another one in the same thread after I collect my thoughts a bit more and figure out what I missed in this post.
+
+* If you find one of these, ESPECIALLY with the NP242 (more desirable non-disconnect housing), check the front axle! It likely has 4.56:1 gears.
+
+edit - PMing me may or may not get a timely answer. My PM inbox is often quite full and I am not on here as much as I used to be. Most questions I get are stuff that's already answered in this post - read it carefully, sleep on it, and check again and it may suddenly become clearer what I was trying to say.
+
+edit2 - If you find my phone number somehow and blow my phone up at 3AM when I'm asleep (Eastern timezone of the US...) by god I swear I will never in a million years answer your question, even if you claim to be a DEA agent and threaten to kick my ass and seize my house if I don't answer your stupid question that's already answered here. Not even after you switch from threats to begging and back 3 or 4 times. I shouldn't have to even state this, but apparently it wasn't clear enough. Christ on a cracker.

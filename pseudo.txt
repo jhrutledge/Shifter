@@ -1,0 +1,61 @@
+ATtiny84:
+12 I/O ports
+ inputs: UP DN BRK D = 4
+ outputs: 3xdisp 3xsol = 6
+
+
+Uno:
+digital I/O pins 14 (6 pwm)
+analog I pins 6
+
+Nano:
+digital I/O pins 22 (6 pwm, 8 analog)
+
+Micro:
+digital I/O pins 20 (6 pwm, 12 analog)
+
+Mini:
+digital I/O pins 14 (6 pwm)
+analog I pins 8
+
+Output: 
+ - display		: 8+1 pins	(digital)
+ - relays		: 3+1 pins	(digital)
+ 
+Input:
+ - up switch	: 1 pins	(digital)
+ - down switch	: 1 pins	(digital)
+ - tps			: 1 pins	(analog)  0.5V(idle) to 4.5V(WOT)
+ - brake switch : 1 pins	(digital)
+ - override sw	: 1 pins	(digital)
+
+States:
+ 1 - s1
+s3 lockup .1 second buffer
+ 2 - s1 s2
+ 3 - s2
+ 4 - none
+
+Pseudo:
+
+ 1st s1(high)s2(low)s3(low)
+ tps>1 for over 2sec then s3(high)
+ up switch => s1(high)s2(low)s3(low) delay0.1s(skip if s3 low) => s1(high)s2(high)s3(low) delay0.1s => 
+ 2nd s1(high)s2(high)s3(high)
+ up switch => s1(high)s2(high)s3(low) delay0.1s(skip if s3 low) => s1(low)s2(high)s3(low) delay0.1s =>
+ 3rd s1(low)s2(high)s3(high)
+ up switch => s1(low)s2(high)s3(low) delay0.1s(skip if s3 low) => s1(low)s2(low)s3(low) delay0.1s =>
+ 4th s1(low)s2(low)s3(high)
+
+ in 1st & tps < 1 then s3 low
+ all gr & brake high then s3 low
+ only immediately after shift will s3 go high otherwise s3 stays low after braking
+ 
+Switch Protocol:
+1. if s3 high then set s3 to low & delay 0.1s
+   if s3 low then skip step1
+ 
+2. set solenoids to position required & delay 0.1s
+
+3. set s3 high
+

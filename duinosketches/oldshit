@@ -1,0 +1,96 @@
+// const int sevSeg[] = {0,1,2,3,4,5,6,9}; //{a,b,c,d,e,f,g,DP}; CC to groud
+// int upState = 0;
+// int tpsThresh = 300;
+// int lastUp = 0;
+// unsigned long lastUpDebounce = 0;
+// int dnState = 0;
+// int lastDn = 0;
+// unsigned long lastDnDebounce = 0;
+// int brkState = 0;
+// int lastBrk = 0;
+// unsigned long lastBrkDebounce = 0;
+//// create gear adt
+//typedef struct {
+//  int disp[8];   // high and low for full display
+//  int sol[3];    // high and low for 2 solenoids
+//} gear;
+//// create instance of all gear combinations
+//gear gearArr[] {
+//  {{0,0,0,0,0,0,0,0},{1,1,1}},
+//  {{LOW,HIGH,HIGH,LOW,LOW,LOW,LOW,LOW},{LOW,HIGH,HIGH}},
+//  {{HIGH,HIGH,LOW,HIGH,HIGH,LOW,HIGH,LOW},{LOW,LOW,HIGH}},
+//  {{HIGH,HIGH,HIGH,HIGH,LOW,LOW,HIGH,LOW},{HIGH,LOW,HIGH}},
+//  {{LOW,HIGH,HIGH,LOW,LOW,HIGH,HIGH,LOW},{HIGH,HIGH,HIGH}}
+//};
+//  setDisp(gearArr[1]);
+//  currGear = 1;
+//  digitalWrite(solen[2],HIGH);
+//  digitalWrite(sevSeg[7],LOW);
+//  lastTC = LOW;
+//  delay(delTime);
+//  tpsValue = analogRead(tpsPin);
+//if(lastTC == HIGH) {
+//          digitalWrite(solen[2],HIGH);
+//          digitalWrite(sevSeg[7],LOW);
+//          lastTC = LOW;
+//          delay(delTime);
+//  // use tps for TC lock in first
+//  if(currGear == 1) {
+//    if(tpsValue < tpsThresh) {
+//      TCtime = millis();
+//    }
+//    if(millis() - TCtime > TCdelay) {
+//      digitalWrite(solen[2],LOW);
+//      digitalWrite(sevSeg[7],HIGH);
+//      lastTC = HIGH;
+//    }
+//  }
+/*   
+  switch (curr) {
+    case 1:
+      TCLock(LOW);
+      setPWM(gears[1].pin
+      break;
+    case 2:
+      
+      break;
+    case 3:
+      
+      break;
+    default:
+    return;
+  }
+  //step1 - TC delay
+  if(lastTC != LOW) {
+    digitalWrite(solen[2],HIGH);
+    digitalWrite(sevSeg[7],LOW);
+    lastTC = LOW;
+    delay(delTime);
+  }
+  //step2 - set gear & display
+  curr++;
+  setSolen(gearArr[curr]);
+  setDisp(gearArr[curr]);
+  delay(delTime);
+  //step3 - set TC
+  currGear = curr;
+  digitalWrite(solen[2],LOW);
+  digitalWrite(sevSeg[7],HIGH);
+  lastTC = HIGH; */
+  //  step1 - TC delay
+  // if(lastTC != LOW) {
+    // digitalWrite(solen[2],HIGH);
+    // digitalWrite(sevSeg[7],LOW);
+    // lastTC = LOW;
+    // delay(delTime);
+  // }
+//  step2 - set gear & display
+  // curr--;
+  // setSolen(gearArr[curr]);
+  // setDisp(gearArr[curr]);
+  // delay(delTime);
+//  step3 - set TC
+  // currGear = curr;
+  // digitalWrite(solen[2],LOW);
+  // digitalWrite(sevSeg[7],HIGH);
+  // lastTC = HIGH;
